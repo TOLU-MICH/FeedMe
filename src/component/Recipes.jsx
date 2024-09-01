@@ -3,7 +3,6 @@ import { data } from "../data/recipeData";
 import IngredientsCard from "./IngredientsCard";
 import axios from "axios";
 import { DotLoader } from "react-spinners";
-import FadeIn from "react-fade-in";
 
 let dish = data[0];
 let desert = data[1];
@@ -57,17 +56,17 @@ const Recipes = () => {
         /> */}
       <div className="relative lg:w-[760px] mx-auto space-y-4 lg:space-y-0 flex justify-center min-h-96">
         {loading ? (
-          <FadeIn className="mx-auto">
+          <div className="mx-auto animate-fadeIn">
             <DotLoader color="#F65F5F" />
             <p>getting featured dish</p>
-          </FadeIn>
+          </div>
         ) : (
-          <FadeIn className="flex">
+          <div className="flex ">
             <Card data={data.meal} />
             <div className="hidden md:block">
               <Card data={data.desert} />
             </div>
-          </FadeIn>
+          </div>
         )}
       </div>
     </section>
@@ -76,7 +75,7 @@ const Recipes = () => {
 
 function Card({ data }) {
   return (
-    <div className="py-4 overflow-hidden text-white lg:w-[480px] rounded-xl bg-[#181010] space-y-2 border border-black w-full">
+    <div className="py-4 overflow-hidden text-white lg:w-[480px] rounded-xl bg-[#181010] space-y-2 border border-black w-full animate-fadeIn">
       <div className="border-b-[2px] border-black relative ">
         <div className="px-6 pb-4 ">
           <h3 className="font-extrabold font-[Montserrat,sans-serif]">

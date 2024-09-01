@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { CloseIcon } from "../assets/svg";
 import IngredientsCard from "./IngredientsCard";
-import FadeIn from "react-fade-in";
 import { Dialog, Transition } from "@headlessui/react";
 import { ClipLoader, DotLoader } from "react-spinners";
 
@@ -32,10 +31,10 @@ const SearchResultContainer = ({ data, searchedValue, type, loading }) => {
                     )))}
             </>
           ) : (
-            <FadeIn className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center animate-fadeIn">
               <DotLoader color="#F65F5F" />
               <p className="text-primary">loading</p>
-            </FadeIn>
+            </div>
           ))}
       </div>
     </>

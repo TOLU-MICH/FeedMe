@@ -3,14 +3,13 @@ import burger from "../assets/burger.webp";
 import SearchResultContainer from "./SearchResultContainer";
 import axios from "axios";
 import Recipes from "./Recipes";
-import FadeIn from "react-fade-in";
 import logo from "../assets/logo.webp";
 
 const Hero = () => {
   return (
     <>
       <section className="bg-[#0D0D0D] w-full overflow-hidden font-[Roboto,sans-serif] min-h-screen z-40">
-        <FadeIn className="w-full min-h-screen bg-gradient-to-b via-[#0D0D0D] from-[#f547481c] from-5%  max-w-screen-xl px-8 mx-auto">
+        <div className="w-full min-h-screen bg-gradient-to-b via-[#0D0D0D] from-[#f547481c] from-5%  max-w-screen-xl px-8 mx-auto animate-fadeIn">
           <div className="flex flex-col items-center justify-center w-fit ">
             <div className="flex items-center w-full p-8 px-0 gap-x-2">
               <img src={logo} alt="logo" className="w-12" />
@@ -46,7 +45,7 @@ const Hero = () => {
             </div>
           </div>
           <Recipes />
-        </FadeIn>
+        </div>
       </section>
     </>
   );

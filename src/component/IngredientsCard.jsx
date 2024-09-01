@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { ChevronRight, CloseIcon } from "../assets/svg";
 import { Dialog, Transition } from "@headlessui/react";
-import FadeIn from "react-fade-in";
 
 const IngredientsCard = ({
   title,
@@ -24,7 +23,7 @@ const IngredientsCard = ({
           setIsOpen(true);
         }}
       >
-        <FadeIn className="w-full">
+        <div className="w-full animate-fadeIn">
           <h5 className="font-extrabold font-[Montserrat,sans-serif] text-gray-800 mb-1">
             {title}
           </h5>
@@ -39,7 +38,7 @@ const IngredientsCard = ({
               </div>
             </div>
           </div>
-        </FadeIn>
+        </div>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
