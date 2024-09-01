@@ -25,7 +25,6 @@ const Recipes = () => {
   const [data, setData] = useState({ meal: undefined, desert: undefined });
 
   useEffect(() => {
-    console.log(getMealTime());
     const fetchMeals = async () => {
       const response = await axios.get(
         `https://feed-me-api-main.vercel.app/meals/random/${getMealTime()}`
@@ -48,13 +47,6 @@ const Recipes = () => {
         <span className="hidden text-white lg:inline">Of the</span>
         <span className="hidden text-primary lg:inline"> Day</span>
       </h3>
-      {/* <IngredientsCard
-          list={dish.ingredients}
-          title={dish.name}
-          tag={dish.type}
-          key={dish.name}
-          // containerStyles="lg:!w-fit"
-        /> */}
       <div className="relative lg:w-[760px] mx-auto space-y-4 lg:space-y-0 flex justify-center min-h-96">
         {loading ? (
           <div className="mx-auto animate-fadeIn">

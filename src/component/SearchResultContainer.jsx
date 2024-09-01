@@ -15,10 +15,18 @@ const SearchResultContainer = ({ data, searchedValue, type, loading }) => {
               {data &&
                 (data.length == 0
                   ? searchedValue && (
-                      <p>
+                      <p className="animate-fadeIn">
                         No Recipe was found for{" "}
-                        <strong>"{searchedValue}"</strong> under the
-                        <strong>"{type}"</strong> category.
+                        <strong className="text-primary">
+                          "{searchedValue}"
+                        </strong>{" "}
+                        {type !== "All" && (
+                          <>
+                            under the{" "}
+                            <strong className="text-primary">"{type}"</strong>{" "}
+                            category.
+                          </>
+                        )}
                       </p>
                     )
                   : data.map((item) => (

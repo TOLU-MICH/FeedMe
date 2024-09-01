@@ -32,10 +32,18 @@ const Explore = () => {
     e && e.preventDefault();
     if (inputValue.current?.value !== "") {
       setLoading(true);
-      const response = await axios.get(
-        `https://feed-me-api-main.vercel.app/meals/search/${inputValue.current.value}`
-      );
-      showLoader(response, idx);
+      try {
+        const response = await axios.get(
+          `https://feed-me-api-main.vercel.app/meals/search/${inputValue.current.value}`
+        );
+        showLoader(response, idx);
+      } catch (error) {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
+        setData([]);
+        console.log(error);
+      }
     } else {
       setLoading(true);
       const response = await axios.get(
