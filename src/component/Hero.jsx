@@ -37,7 +37,7 @@ const Hero = () => {
 
               <div className="lg:w-[40%] flex justify-center items-center w-full">
                 <div>
-                  <div className="">
+                  <div className="animate-fadeIn min-h-[25vh]">
                     <img src={burger} alt="" className="w-full h-full " />
                   </div>
                 </div>
