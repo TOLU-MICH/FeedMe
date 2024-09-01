@@ -33,13 +33,13 @@ const Explore = () => {
     if (inputValue.current?.value !== "") {
       setLoading(true);
       const response = await axios.get(
-        `https://feedme-api.onrender.com/meals/search/${inputValue.current.value}`
+        `https://feed-me-api-main.vercel.app/meals/search/${inputValue.current.value}`
       );
       showLoader(response, idx);
     } else {
       setLoading(true);
       const response = await axios.get(
-        `https://feedme-api.onrender.com/meals/`
+        `https://feed-me-api-main.vercel.app/meals/`
       );
       showLoader(response, idx);
     }

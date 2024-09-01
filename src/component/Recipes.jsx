@@ -27,10 +27,10 @@ const Recipes = () => {
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await axios.get(
-        `https://feedme-api.onrender.com/meals/random/${getMealTime()}`
+        `https://feed-me-api-main.vercel.app/meals/random/${getMealTime()}`
       );
       const desertResponse = await axios.get(
-        `https://feedme-api.onrender.com/meals/random/Dessert`
+        `https://feed-me-api-main.vercel.app/meals/random/Dessert`
       );
       setTimeout(() => {
         setLoading(false);
