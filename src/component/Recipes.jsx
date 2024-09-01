@@ -11,11 +11,11 @@ function getMealTime() {
   const now = new Date();
   const hours = now.getHours();
 
-  if (hours >= 6 && hours <= 12) {
+  if (hours >= 0 && hours <= 12) {
     return "breakfast";
   } else if (hours >= 12 && hours <= 18) {
     return "lunch";
-  } else if (hours >= 18 && hours <= 21) {
+  } else if (hours >= 18 && hours <= 24) {
     return "dinner";
   }
 }
@@ -25,6 +25,7 @@ const Recipes = () => {
   const [data, setData] = useState({ meal: undefined, desert: undefined });
 
   useEffect(() => {
+    console.log(getMealTime());
     const fetchMeals = async () => {
       const response = await axios.get(
         `https://feed-me-api-main.vercel.app/meals/random/${getMealTime()}`
