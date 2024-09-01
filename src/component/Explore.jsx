@@ -18,7 +18,7 @@ const Explore = () => {
     const fetchMeals = async () => {
       setLoading(true);
       const response = await axios.get(
-        `https://feed-me-api-main.vercel.app//meals/`
+        `https://feed-me-api-main.vercel.app/meals/`
       );
       setTimeout(() => {
         setLoading(false);
