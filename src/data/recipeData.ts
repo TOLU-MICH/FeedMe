@@ -1,0 +1,35 @@
+export const data = [
+  {
+    id: 1,
+    name: "Classic Pancakes",
+    type: "Breakfast",
+    ingredients: [
+      "1 cup all-purpose flour",
+      "2 tablespoons sugar",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon baking soda",
+      "1/4 teaspoon salt",
+      "1 cup buttermilk",
+      "1 egg",
+      "2 tablespoons melted butter",
+      "Maple syrup for serving",
+    ],
+  },
+  {
+    id: 2,
+    name: "Chocolate Cake",
+    type: "Dessert",
+    ingredients: [
+      "2 cups all-purpose flour",
+      "1 3/4 cups granulated sugar",
+      "3/4 cup unsweetened cocoa powder",
+      "1 1/2 teaspoons baking powder",
+      "1 1/2 teaspoons baking soda",
+      "1 teaspoon salt",
+      "2 eggs",
+      "1 cup milk",
+      "1/2 cup vegetable oil",
+      "2 teaspoons vanilla extract",
+    ],
+  },
+];
